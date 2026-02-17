@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-key="pageTitle">شركة عزاز البناء للخرسانة الجاهزة | جدة - السعودية</title>
-    <meta name="description" content="أفضل مورد خرسانة جاهزة في جدة. نوفر خرسانة من C15 إلى C45 مع 6 مضخات و30 خلاطة. خدمة 24/7.">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Cairo:wght@400;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -23,64 +19,73 @@
             --success-color: #10b981;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
         body {
             font-family: 'Tajawal', 'Cairo', sans-serif;
             line-height: 1.8;
             color: var(--dark-color);
             overflow-x: hidden;
-            transition: all 0.3s ease;
         }
 
-        /* English Mode Styles */
         html[lang="en"] body {
             font-family: 'Roboto', sans-serif;
             direction: ltr;
         }
 
-        html[lang="en"] {
-            direction: ltr;
-        }
+        html[lang="en"] { direction: ltr; }
 
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
+        /* ===== LOGO STYLES ===== */
         .logo {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
 
-        .logo-icon {
-            width: 60px;
+        /* OPTION 1: Image Logo */
+        .logo-img {
             height: 60px;
+            width: auto;
+            max-width: 150px;
+            object-fit: contain;
+        }
+
+        /* OPTION 2: Circle Logo with Image */
+        .logo-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--secondary-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* OPTION 3: Square Logo with Image */
+        .logo-square {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .logo-square img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Text Logo (if no image) */
+        .logo-text-only {
+            width: 70px;
+            height: 70px;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             border-radius: 12px;
             display: flex;
@@ -102,6 +107,26 @@
             font-size: 0.8rem;
             color: var(--gray-color);
             font-weight: 500;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .nav-links {
@@ -129,21 +154,10 @@
             transition: width 0.3s ease;
         }
 
-        html[dir="rtl"] .nav-links a::after {
-            right: 0;
-        }
-
-        html[dir="ltr"] .nav-links a::after {
-            left: 0;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
+        html[dir="rtl"] .nav-links a::after { right: 0; }
+        html[dir="ltr"] .nav-links a::after { left: 0; }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a:hover { color: var(--primary-color); }
 
         .mobile-menu {
             display: none;
@@ -152,7 +166,7 @@
             color: var(--primary-color);
         }
 
-        /* Language Switcher Button */
+        /* Language Switcher */
         .lang-switch-btn {
             position: fixed;
             top: 100px;
@@ -166,7 +180,6 @@
             font-size: 1rem;
             z-index: 999;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -182,39 +195,21 @@
             border-radius: 30px 0 0 30px;
         }
 
-        .lang-switch-btn:hover {
-            transform: translateX(5px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        html[dir="ltr"] .lang-switch-btn:hover {
-            transform: translateX(-5px);
-        }
-
         /* Hero Section */
         .hero {
             margin-top: 80px;
             min-height: 100vh;
-            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(15, 23, 42, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><path fill="%23e0e0e0" d="M0 300h1200v300H0z"/><rect x="100" y="200" width="200" height="300" fill="%23ccc"/><rect x="400" y="150" width="150" height="350" fill="%23bbb"/><rect x="700" y="250" width="180" height="250" fill="%23ccc"/></svg>');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(15, 23, 42, 0.8));
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            position: relative;
-            overflow: hidden;
+            padding: 2rem;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-            padding: 0 2rem;
-        }
-
+        .hero-content { max-width: 900px; }
+        
         .hero-badge {
             display: inline-block;
             background: var(--secondary-color);
@@ -222,7 +217,6 @@
             padding: 0.5rem 1.5rem;
             border-radius: 50px;
             font-weight: 800;
-            font-size: 0.9rem;
             margin-bottom: 1.5rem;
         }
 
@@ -231,17 +225,12 @@
             font-weight: 900;
             margin-bottom: 1.5rem;
             line-height: 1.4;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             opacity: 0.95;
-            font-weight: 500;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .hero-stats {
@@ -252,10 +241,8 @@
             flex-wrap: wrap;
         }
 
-        .stat-item {
-            text-align: center;
-        }
-
+        .stat-item { text-align: center; }
+        
         .stat-number {
             font-size: 3rem;
             font-weight: 900;
@@ -265,7 +252,6 @@
 
         .stat-label {
             font-size: 1rem;
-            opacity: 0.9;
             font-weight: 600;
         }
 
@@ -312,708 +298,14 @@
             color: var(--primary-color);
         }
 
-        /* Section Styles */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h3 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-weight: 900;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-header h3::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            width: 60px;
-            height: 4px;
-            background: var(--secondary-color);
-            border-radius: 2px;
-        }
-
-        html[dir="rtl"] .section-header h3::after {
-            right: 50%;
-            transform: translateX(50%);
-        }
-
-        html[dir="ltr"] .section-header h3::after {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .section-header p {
-            color: var(--gray-color);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 1.5rem auto 0;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--light-color);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-image {
-            position: relative;
-        }
-
-        .about-image-main {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 5rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        .experience-badge {
-            position: absolute;
-            bottom: -20px;
-            background: var(--accent-color);
-            color: white;
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
-        }
-
-        html[dir="rtl"] .experience-badge {
-            left: -20px;
-        }
-
-        html[dir="ltr"] .experience-badge {
-            right: -20px;
-        }
-
-        .experience-badge .years {
-            font-size: 3rem;
-            font-weight: 900;
-            display: block;
-            line-height: 1;
-        }
-
-        .experience-badge .text {
-            font-size: 0.9rem;
-            font-weight: 700;
-        }
-
-        .about-content h4 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-        }
-
-        .about-content p {
-            color: var(--gray-color);
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            line-height: 1.9;
-        }
-
-        .features-list {
-            list-style: none;
-            margin-top: 2rem;
-        }
-
-        .features-list li {
-            padding: 0.8rem 0;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-weight: 700;
-            color: var(--dark-color);
-        }
-
-        html[dir="rtl"] .features-list li {
-            flex-direction: row;
-        }
-
-        html[dir="ltr"] .features-list li {
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-        }
-
-        .features-list i {
-            color: var(--success-color);
-            font-size: 1.2rem;
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-            text-align: center;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        html[dir="rtl"] .service-card::before {
-            right: 0;
-            transform-origin: right;
-        }
-
-        html[dir="ltr"] .service-card::before {
-            left: 0;
-            transform-origin: left;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .service-icon {
-            width: 90px;
-            height: 90px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2.2rem;
-            margin: 0 auto 1.5rem;
-            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
-        }
-
-        .service-card h4 {
-            font-size: 1.4rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .service-card p {
-            color: var(--gray-color);
-            line-height: 1.8;
-            font-size: 1rem;
-        }
-
-        /* Products Section */
-        .products {
-            background: linear-gradient(135deg, var(--dark-color), #1e293b);
-            color: white;
-        }
-
-        .products .section-header h3 {
-            color: white;
-        }
-
-        .products .section-header p {
-            color: #94a3b8;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .product-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover {
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-5px);
-            border-color: var(--secondary-color);
-        }
-
-        .product-grade {
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .product-name {
-            font-size: 1.3rem;
-            font-weight: 800;
+        /* Footer Logo Big */
+        .footer-logo {
+            width: 120px;
+            height: auto;
             margin-bottom: 1rem;
         }
 
-        .product-desc {
-            color: #cbd5e1;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .product-specs {
-            list-style: none;
-            margin-top: 1.5rem;
-            background: rgba(0,0,0,0.2);
-            padding: 1rem;
-            border-radius: 10px;
-        }
-
-        html[dir="rtl"] .product-specs {
-            text-align: right;
-        }
-
-        html[dir="ltr"] .product-specs {
-            text-align: left;
-        }
-
-        .product-specs li {
-            padding: 0.7rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.9rem;
-            color: #e2e8f0;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .product-specs li:last-child {
-            border-bottom: none;
-        }
-
-        /* Fleet Section */
-        .fleet-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .fleet-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .fleet-card:hover {
-            transform: scale(1.02);
-        }
-
-        .fleet-image {
-            height: 200px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-        }
-
-        .fleet-info {
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .fleet-count {
-            display: inline-block;
-            background: var(--secondary-color);
-            color: var(--dark-color);
-            padding: 0.3rem 1.2rem;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .fleet-info h4 {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin-bottom: 0.8rem;
-            font-weight: 800;
-        }
-
-        .fleet-info p {
-            color: var(--gray-color);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* Why Choose Us */
-        .why-us {
-            background: var(--light-color);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .why-card {
-            text-align: center;
-            padding: 2.5rem 2rem;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-
-        .why-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .why-icon {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: white;
-            font-size: 2.5rem;
-            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
-        }
-
-        .why-card h4 {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .why-card p {
-            color: var(--gray-color);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* Contact Section */
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .contact-info h4 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-        }
-
-        .contact-info > p {
-            color: var(--gray-color);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .contact-details {
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            background: var(--light-color);
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
-
-        html[dir="rtl"] .contact-item:hover {
-            transform: translateX(-10px);
-        }
-
-        html[dir="ltr"] .contact-item:hover {
-            transform: translateX(10px);
-        }
-
-        .contact-item:hover {
-            background: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-color);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .contact-text h5 {
-            color: var(--primary-color);
-            margin-bottom: 0.3rem;
-            font-size: 1.1rem;
-            font-weight: 800;
-        }
-
-        .contact-text p, .contact-text a {
-            color: var(--gray-color);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .contact-text a:hover {
-            color: var(--secondary-color);
-        }
-
-        .contact-form {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-            font-weight: 700;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .btn-submit {
-            width: 100%;
-            padding: 1rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: 800;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
-        }
-
-        /* Map */
-        .map-container {
-            margin-top: 3rem;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            height: 400px;
-            background: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray-color);
-            font-size: 1.2rem;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark-color);
-            color: white;
-            padding: 4rem 2rem 1rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-section h5 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-            font-weight: 800;
-        }
-
-        .footer-section p, .footer-section a {
-            color: #94a3b8;
-            text-decoration: none;
-            line-height: 1.9;
-            transition: color 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .footer-section a:hover {
-            color: var(--secondary-color);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        html[dir="rtl"] .footer-links a {
-            flex-direction: row;
-        }
-
-        html[dir="ltr"] .footer-links a {
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: var(--secondary-color);
-            color: var(--dark-color);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 3rem auto 0;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        /* WhatsApp Float */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            width: 60px;
-            height: 60px;
-            background: #25d366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
-            z-index: 998;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        html[dir="rtl"] .whatsapp-float {
-            left: 30px;
-        }
-
-        html[dir="ltr"] .whatsapp-float {
-            right: 30px;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-
-        /* Mobile Responsive */
+        /* Responsive */
         @media (max-width: 968px) {
             .nav-links {
                 display: none;
@@ -1027,123 +319,20 @@
                 width: 100%;
             }
 
-            html[dir="rtl"] .nav-links {
-                right: 0;
-                left: 0;
-            }
-
-            html[dir="ltr"] .nav-links {
-                left: 0;
-                right: 0;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .hero-stats {
-                gap: 2rem;
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .about-grid,
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image {
-                order: -1;
-            }
-
-            html[dir="rtl"] .experience-badge {
-                left: 20px;
-            }
-
-            html[dir="ltr"] .experience-badge {
-                right: 20px;
-            }
-
-            .lang-switch-btn {
-                top: 80px;
-                padding: 0.6rem 1rem;
-                font-size: 0.9rem;
+            html[dir="rtl"] .nav-links { right: 0; left: 0; }
+            html[dir="ltr"] .nav-links { left: 0; right: 0; }
+            
+            .nav-links.active { display: flex; }
+            .mobile-menu { display: block; }
+            
+            .logo-img { height: 50px; }
+            .logo-circle, .logo-square, .logo-text-only {
+                width: 60px;
+                height: 60px;
             }
         }
 
-        @media (max-width: 640px) {
-            .hero {
-                margin-top: 70px;
-                min-height: auto;
-                padding: 4rem 1rem;
-            }
-
-            .hero h2 {
-                font-size: 1.6rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            section {
-                padding: 3rem 1rem;
-            }
-
-            .section-header h3 {
-                font-size: 1.8rem;
-            }
-
-            .btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.9rem;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .cta-buttons {
-                width: 100%;
-            }
-
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-                bottom: 20px;
-            }
-
-            html[dir="rtl"] .whatsapp-float {
-                left: 20px;
-            }
-
-            html[dir="ltr"] .whatsapp-float {
-                right: 20px;
-            }
-        }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Loading Animation */
+        /* Loading */
         .loader {
             position: fixed;
             top: 0;
@@ -1158,27 +347,12 @@
             transition: opacity 0.5s ease;
         }
 
-        .loader.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader-content {
-            text-align: center;
-        }
-
+        .loader.hidden { opacity: 0; pointer-events: none; }
+        
         .loader-logo {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            font-weight: 900;
-            margin: 0 auto 1rem;
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
             animation: pulse 1.5s infinite;
         }
 
@@ -1190,15 +364,22 @@
 </head>
 <body>
 
-    <!-- Loading Screen -->
+    <!-- Loading Screen with Logo -->
     <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="loader-logo" id="loaderText">ع أ</div>
-            <p style="color: var(--primary-color); font-weight: 700; font-size: 1.2rem;" data-key="loading">جاري التحميل...</p>
+        <div class="loader-content" style="text-align: center;">
+            <!-- Yahan apna logo daalein -->
+            <img src="logo.png" alt="Logo" class="loader-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            
+            <!-- Backup text agar logo na mile -->
+            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 20px; display: none; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 900; margin: 0 auto 1rem; animation: pulse 1.5s infinite;">
+                ع أ
+            </div>
+            
+            <p style="color: var(--primary-color); font-weight: 700;" data-key="loading">جاري التحميل...</p>
         </div>
     </div>
 
-    <!-- Language Switcher Button -->
+    <!-- Language Switcher -->
     <button class="lang-switch-btn" onclick="toggleLanguage()">
         <i class="fas fa-globe"></i>
         <span id="langText">English</span>
@@ -1208,20 +389,38 @@
     <header id="header">
         <nav>
             <div class="logo">
-    <img src="logo.png" alt="Azaz Albena Logo" style="height: 60px; width: auto;">
-    <div class="logo-text">
-        <h1 data-key="companyName">شركة عزاز البناء</h1>
-        <span data-key="companyTag">للخرسانة الجاهزة</span>
-    </div>
-</div>
+                <!-- ===== LOGO OPTIONS ===== -->
+                
+                <!-- OPTION 1: Simple Image (Sabse Aasan) -->
+                <!-- <img src="logo.png" alt="Logo" class="logo-img"> -->
+                
+                <!-- OPTION 2: Circle Image -->
+                <!-- <div class="logo-circle">
+                    <img src="logo.png" alt="Logo">
+                </div> -->
+                
+                <!-- OPTION 3: Square Image -->
+                <!-- <div class="logo-square">
+                    <img src="logo.png" alt="Logo">
+                </div> -->
+                
+                <!-- OPTION 4: Text Logo (Default) -->
+                <div class="logo-text-only" id="mainLogo">ع أ</div>
+                
+                <!-- Company Name -->
+                <div class="logo-text">
+                    <h1 data-key="companyName">شركة عزاز البناء</h1>
+                    <span data-key="companyTag">للخرسانة الجاهزة</span>
+                </div>
+            </div>
+            
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" data-key="navHome">الرئيسية</a></li>
                 <li><a href="#about" data-key="navAbout">من نحن</a></li>
                 <li><a href="#services" data-key="navServices">خدماتنا</a></li>
-                <li><a href="#products" data-key="navProducts">منتجاتنا</a></li>
-                <li><a href="#fleet" data-key="navFleet">معداتنا</a></li>
                 <li><a href="#contact" data-key="navContact">اتصل بنا</a></li>
             </ul>
+            
             <div class="mobile-menu" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
@@ -1233,7 +432,7 @@
         <div class="hero-content">
             <span class="hero-badge" data-key="heroBadge">المورد الموثوق للخرسانة في السعودية</span>
             <h2 data-key="heroTitle">نبني مستقبل جدة بجودة خرسانية متفوقة</h2>
-            <p data-key="heroDesc">نحن المورد الرائد للخرسانة الجاهزة في جدة، نقدم خرسانة عالية الجودة من C15 إلى C45 مع أسطول حديث من 30 خلاطة و6 مضخات</p>
+            <p data-key="heroDesc">نحن المورد الرائد للخرسانة الجاهزة في جدة</p>
             
             <div class="hero-stats">
                 <div class="stat-item">
@@ -1244,856 +443,108 @@
                     <span class="stat-number">30</span>
                     <span class="stat-label" data-key="statTrucks">شاحنة خلط</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label" data-key="statService">خدمة على مدار الساعة</span>
-                </div>
             </div>
 
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">
                     <i class="fas fa-phone"></i> <span data-key="btnQuote">احصل على عرض سعر</span>
                 </a>
-                <a href="#products" class="btn btn-secondary">
-                    <i class="fas fa-cube"></i> <span data-key="btnProducts">تصفح المنتجات</span>
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h3 data-key="aboutTitle">عن شركتنا</h3>
-                <p data-key="aboutSubtitle">نقدم حلول خرسانية ممتازة في جدة والمناطق المحيطة بها</p>
-            </div>
+    <!-- Footer with Big Logo -->
+    <footer style="background: var(--dark-color); color: white; padding: 3rem 2rem; margin-top: 3rem;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <!-- Footer Logo -->
+            <img src="logo.png" alt="Logo" class="footer-logo" onerror="this.style.display='none'">
             
-            <div class="about-grid">
-                <div class="about-content fade-in">
-                    <h4 data-key="aboutHeading">شريكك الموثوق في البناء</h4>
-                    <p data-key="aboutPara1">شركة عزاز البناء للخرسانة الجاهزة هي شركة رائدة في مجال توريد الخرسانة الجاهزة مقرها جدة، المملكة العربية السعودية. نحن متخصصون في توفير خرسانة عالية الجودة لمشاريع البناء بجميع الأحجام، من المباني السكنية إلى المشاريع التجارية الكبيرة.</p>
-                    <p data-key="aboutPara2">بفضل أسطولنا الحديث المكون من 30 شاحنة خلط و6 مضخات خرسانية، نضمن التسليم في الوقت المحدد والخدمات الاحترافية لتلبية مواعيد البناء الخاصة بك. التزامنا بالجودة ورضا العملاء جعلنا الخيار المفضل في المنطقة.</p>
-                    
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> <span data-key="feat1">معايير جودة معتمدة من الأيزو</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span data-key="feat2">مختبر اختبارات متطور</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span data-key="feat3">فريق تقني ذو خبرة</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span data-key="feat4">ضمان التسليم في الوقت المحدد</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span data-key="feat5">أسعار تنافسية</span></li>
-                    </ul>
-                </div>
-                
-                <div class="about-image fade-in">
-                    <div class="about-image-main">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="experience-badge">
-                        <span class="years">+10</span>
-                        <span class="text" data-key="yearsExp">سنوات<br>خبرة</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h3 data-key="servicesTitle">خدماتنا</h3>
-                <p data-key="servicesSubtitle">حلول خرسانية شاملة مصممة حسب متطلبات مشروعك</p>
-            </div>
+            <h2 data-key="companyName" style="color: var(--secondary-color); margin-bottom: 1rem;">شركة عزاز البناء</h2>
+            <p data-key="footerDesc" style="color: #94a3b8; max-width: 600px; margin: 0 auto;">المورد الرائد للخرسانة الجاهزة في جدة</p>
             
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-truck-mix"></i>
-                    </div>
-                    <h4 data-key="service1Title">توريد الخرسانة الجاهزة</h4>
-                    <p data-key="service1Desc">خرسانة جاهزة عالية الجودة تُسلم إلى موقع البناء الخاص بك في التوقيت المحدد. نقدم درجات متنوعة من C15 إلى C45 لتلبية متطلباتك الإنشائية المحددة.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-arrow-up"></i>
-                    </div>
-                    <h4 data-key="service2Title">خدمات ضخ الخرسانة</h4>
-                    <p data-key="service2Desc">ضخ خرساني احترافي باستخدام أسطولنا المكون من 6 مضخات حديثة. نتعامل مع المباني العالية والأساسات والهياكل المعقدة بسهولة ودقة.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h4 data-key="service3Title">اختبارات الجودة</h4>
-                    <p data-key="service3Desc">خدمات اختبار في الموقع والمختبر لضمان امتثال خرسانتك لجميع متطلبات كود البناء السعودي والمعايير الدولية.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-hard-hat"></i>
-                    </div>
-                    <h4 data-key="service4Title">الاستشارات الفنية</h4>
-                    <p data-key="service4Desc">نصائح خبراء حول تصميم خلطات الخرسانة، وتقنيات الصب، وطرق المعالجة لضمان القوة والمتانة المثلى لهياكللك.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h4 data-key="service5Title">التوريد الطارئ</h4>
-                    <p data-key="service5Desc">خدمات توريد خرسانية طارئة على مدار 24/7 للاحتياجات العاجلة للمشروع. نحن نفهم أن الوقت هو المال في أعمال البناء.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h4 data-key="service6Title">خيارات صديقة للبيئة</h4>
-                    <p data-key="service6Desc">حلول خرسانية مستدامة مع تصاميم خلط محسنة لتقليل الأثر البيئي مع الحفاظ على الأداء المتفوق.</p>
-                </div>
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #64748b;">
+                &copy; 2024 <span data-key="companyFull">شركة عزاز البناء للخرسانة الجاهزة</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products" id="products">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h3 data-key="productsTitle">درجات الخرسانة</h3>
-                <p data-key="productsSubtitle">نوفر جميع درجات الخرسانة القياسية من C15 إلى C45، مطابقة لكود البناء السعودي</p>
-            </div>
-            
-            <div class="products-grid">
-                <div class="product-card fade-in">
-                    <div class="product-grade">C15</div>
-                    <div class="product-name" data-key="grade1Name">الدرجة القياسية</div>
-                    <p class="product-desc" data-key="grade1Desc">مثالية للخرسانة العازلة والتطبيقات غير الإنشائية</p>
-                    <ul class="product-specs">
-                        <li><span data-key="specStrength">القوة:</span> <span>15 <span data-key="unitMpa">ميجا باسكال</span></span></li>
-                        <li><span data-key="specSlump">الهبوط:</span> <span>75-100 <span data-key="unitMm">ملم</span></span></li>
-                        <li><span data-key="specUsage">الاستخدام:</span> <span data-key="grade1Usage">الأساسات، العزل</span></span></li>
-                    </ul>
-                </div>
-                
-                <div class="product-card fade-in">
-                    <div class="product-grade">C20</div>
-                    <div class="product-name" data-key="grade2Name">الأغراض العامة</div>
-                    <p class="product-desc" data-key="grade2Desc">مثالية للأرضيات المنزلية والأساسات</p>
-                    <ul class="product-specs">
-                        <li><span data-key="specStrength">القوة:</span> <span>20 <span data-key="unitMpa">ميجا باسكال</span></span></li>
-                        <li><span data-key="specSlump">الهبوط:</span> <span>75-100 <span data-key="unitMm">ملم</span></span></li>
-                        <li><span data-key="specUsage">الاستخدام:</span> <span data-key="grade2Usage">الأرضيات، الممرات</span></span></li>
-                    </ul>
-                </div>
-                
-                <div class="product-card fade-in">
-                    <div class="product-grade">C25</div>
-                    <div class="product-name" data-key="grade3Name">الدرجة الإنشائية</div>
-                    <p class="product-desc" data-key="grade3Desc">تُستخدم في الهياكل الخرسانية المسلحة</p>
-                    <ul class="product-specs">
-                        <li><span data-key="specStrength">القوة:</span> <span>25 <span data-key="unitMpa">ميجا باسكال</span></span></li>
-                        <li><span data-key="specSlump">الهبوط:</span> <span>100-150 <span data-key="unitMm">ملم</span></span></li>
-                        <li><span data-key="specUsage">الاستخدام:</span> <span data-key="grade3Usage">الكمرات، الأعمدة</span></span></li>
-                    </ul>
-                </div>
-                
-                <div class="product-card fade-in">
-                    <div class="product-grade">C30</div>
-                    <div class="product-name" data-key="grade4Name">قوة عالية</div>
-                    <p class="product-desc" data-key="grade4Desc">للتطبيقات الإنشائية الثقيلة</p>
-                    <ul class="product-specs">
-                        <li><span data-key="specStrength">القوة:</span> <span>30 <span data-key="unitMpa">ميجا باسكال</span></span></li>
-                        <li><span data-key="specSlump">الهبوط:</span> <span>100-150 <span data-key="unitMm">ملم</span></span></li>
-                        <li><span data-key="specUsage">الاستخدام:</span> <span data-key="grade4Usage">الأحمال الثقيلة</span></span></li>
-                    </ul>
-                </div>
-                
-                <div class="product-card fade-in">
-                    <div class="product-grade">C35</div>
-                    <div class="product-name" data-key="grade5Name">درجة تجارية</div>
-                    <p class="product-desc" data-key="grade5Desc">البناء التجاري والصناعي</p>
-                    <ul class="product-specs">
-                        <li><span data-key="specStrength">القوة:</span> <span>35 <span data-key="unitMpa">ميجا باسكال</span></span></li>
-                        <li><span data-key="specSlump">الهبوط:</span> <span>150-200 <span data-key="unitMm">ملم</span></span></li>
-                        <li><span data-key="specUsage">الاستخدام:</span> <span data-key="grade5Usage">المباني التجارية</span></span></li>
-                    </ul>
-                </div>
-                
-                <div class="product-card fade-in">
-                    <div class="product-grade">C45</div>
-                    <div class="product-name" data-key="grade6Name">درجة ممتازة</div>
-                    <p class="product-desc" data-key="grade6Desc">أقصى قوة للهياكل الحرجة</p>
-                    <ul class="product-specs">
-                        <li><span data-key="specStrength">القوة:</span> <span>45 <span data-key="unitMpa">ميجا باسكال</span></span></li>
-                        <li><span data-key="specSlump">الهبوط:</span> <span>150-200 <span data-key="unitMm">ملم</span></span></li>
-                        <li><span data-key="specUsage">الاستخدام:</span> <span data-key="grade6Usage">الأبراج، الجسور</span></span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fleet Section -->
-    <section class="fleet" id="fleet">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h3 data-key="fleetTitle">معداتنا</h3>
-                <p data-key="fleetSubtitle">معدات حديثة تضمن خدمة موثوقة وفعالة</p>
-            </div>
-            
-            <div class="fleet-grid">
-                <div class="fleet-card fade-in">
-                    <div class="fleet-image">
-                        <i class="fas fa-truck-moving"></i>
-                    </div>
-                    <div class="fleet-info">
-                        <span class="fleet-count">30 <span data-key="unitUnits">وحدة</span></span>
-                        <h4 data-key="fleet1Title">شاحنات الخلط</h4>
-                        <p data-key="fleet1Desc">شاحنات خلط حديثة بسعة 8-12 متر مكعب، مزودة بنظام تحديد المواقع GPS للمراقبة الفورية والتسليم في الوقت المحدد.</p>
-                    </div>
-                </div>
-                
-                <div class="fleet-card fade-in">
-                    <div class="fleet-image">
-                        <i class="fas fa-arrow-up"></i>
-                    </div>
-                    <div class="fleet-info">
-                        <span class="fleet-count">6 <span data-key="unitUnits">وحدات</span></span>
-                        <h4 data-key="fleet2Title">مضخات الخرسانة</h4>
-                        <p data-key="fleet2Desc">مضخات خرسانية عالية السعة قادرة على الوصول إلى ارتفاع 42 متر، مثالية لمشاريع المباني العالية.</p>
-                    </div>
-                </div>
-                
-                <div class="fleet-card fade-in">
-                    <div class="fleet-image">
-                        <i class="fas fa-vials"></i>
-                    </div>
-                    <div class="fleet-info">
-                        <span class="fleet-count">1 <span data-key="unitLab">مختبر</span></span>
-                        <h4 data-key="fleet3Title">مختبر الاختبارات</h4>
-                        <p data-key="fleet3Desc">مختبر مراقبة جودة في الموقع مجهز بمعدات اختبار حديثة لاختبارات الهبوط والمكعبات والركام.</p>
-                    </div>
-                </div>
-                
-                <div class="fleet-card fade-in">
-                    <div class="fleet-image">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <div class="fleet-info">
-                        <span class="fleet-count">24/7</span>
-                        <h4 data-key="fleet4Title">فريق الصيانة</h4>
-                        <p data-key="fleet4Desc">طاقم صيانة مخصص يضمن أن جميع المعدات في حالة عمل مثالية لخدمة مستمرة.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="why-us" id="why-us">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h3 data-key="whyTitle">لماذا تختارنا</h3>
-                <p data-key="whySubtitle">ما الذي يجعل عزاز البناء المورد المفضل للخرسانة في جدة</p>
-            </div>
-            
-            <div class="why-grid">
-                <div class="why-card fade-in">
-                    <div class="why-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h4 data-key="why1Title">ضمان الجودة</h4>
-                    <p data-key="why1Desc">كل دفعة تُختبر للامتثال لكود البناء السعودي والمعايير الدولية</p>
-                </div>
-                
-                <div class="why-card fade-in">
-                    <div class="why-icon">
-                        <i class="fas fa-shipping-fast"></i>
-                    </div>
-                    <h4 data-key="why2Title">تسليم في الوقت المحدد</h4>
-                    <p data-key="why2Desc">الأسطول الكبير يضمن وصول خرصانتك في الوقت المحدد، كل مرة، للحفاظ على جداول المشاريع</p>
-                </div>
-                
-                <div class="why-card fade-in">
-                    <div class="why-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h4 data-key="why3Title">دعم 24/7</h4>
-                    <p data-key="why3Desc">خدمة عملاء ودعم تقني على مدار الساعة لجميع احتياجاتك الخرسانية</p>
-                </div>
-                
-                <div class="why-card fade-in">
-                    <div class="why-icon">
-                        <i class="fas fa-tags"></i>
-                    </div>
-                    <h4 data-key="why4Title">أسعار تنافسية</h4>
-                    <p data-key="why4Desc">أفضل أسعار السوق دون المساس بمعايير الجودة أو الخدمة</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h3 data-key="contactTitle">اتصل بنا</h3>
-                <p data-key="contactSubtitle">تواصل للحصول على عروض أسعار، استشارات فنية، أو أي استفسارات</p>
-            </div>
-            
-            <div class="contact-wrapper">
-                <div class="contact-info fade-in">
-                    <h4 data-key="contactHeading">لنبني شيئاً عظيماً معاً</h4>
-                    <p data-key="contactPara">اتصل بنا اليوم للحصول على عرض سعر مجاني أو لمناقشة متطلباتك الخرسانية. فريقنا جاهز لمساعدتك بنصائح خبيرة وأسعار تنافسية.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h5 data-key="addrLabel">العنوان</h5>
-                                <p data-key="addrValue">المنطقة الصناعية، جدة<br>المملكة العربية السعودية</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h5 data-key="phoneLabel">الهاتف</h5>
-                                <a href="tel:+966500000000">+966 50 000 0000</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h5 data-key="emailLabel">البريد الإلكتروني</h5>
-                                <a href="mailto:info@azazalbena.com">info@azazalbena.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h5 data-key="hoursLabel">ساعات العمل</h5>
-                                <p data-key="hoursValue">السبت - الخميس: 24 ساعة<br>الجمعة: للطوارئ فقط</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form fade-in">
-                    <form id="contactForm" onsubmit="handleSubmit(event)">
-                        <div class="form-group">
-                            <label for="name" data-key="formName">الاسم الكامل</label>
-                            <input type="text" id="name" name="name" required placeholder="اسمك">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone" data-key="formPhone">رقم الهاتف</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="05X XXX XXXX">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" data-key="formEmail">البريد الإلكتروني</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="grade" data-key="formGrade">درجة الخرسانة المطلوبة</label>
-                            <select id="grade" name="grade">
-                                <option value="" data-key="selectGrade">اختر الدرجة</option>
-                                <option value="C15">C15 - <span data-key="optStandard">قياسية</span></option>
-                                <option value="C20">C20 - <span data-key="optGeneral">أغراض عامة</span></option>
-                                <option value="C25">C25 - <span data-key="optStructural">إنشائية</span></option>
-                                <option value="C30">C30 - <span data-key="optHigh">قوة عالية</span></option>
-                                <option value="C35">C35 - <span data-key="optCommercial">تجارية</span></option>
-                                <option value="C45">C45 - <span data-key="optPremium">ممتازة</span></option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" data-key="formMessage">تفاصيل المشروع</label>
-                            <textarea id="message" name="message" placeholder="أخبرنا عن متطلبات مشروعك..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn-submit">
-                            <i class="fas fa-paper-plane"></i> <span data-key="formSubmit">إرسال الرسالة</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="map-container fade-in">
-                <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                <span data-key="mapText">خريطة الموقع - المنطقة الصناعية بجدة</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-section">
-                <h5 data-key="footerCompany">عزاز البناء</h5>
-                <p data-key="footerDesc">المورد الرائد للخرسانة الجاهزة في جدة، المملكة العربية السعودية. ملتزمون بالجودة والموثوقية ورضا العملاء.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h5 data-key="footerLinks">روابط سريعة</h5>
-                <ul class="footer-links">
-                    <li><a href="#home"><i class="fas fa-chevron-left"></i> <span data-key="navHome">الرئيسية</span></a></li>
-                    <li><a href="#about"><i class="fas fa-chevron-left"></i> <span data-key="navAbout">من نحن</span></a></li>
-                    <li><a href="#services"><i class="fas fa-chevron-left"></i> <span data-key="navServices">خدماتنا</span></a></li>
-                    <li><a href="#products"><i class="fas fa-chevron-left"></i> <span data-key="navProducts">منتجاتنا</span></a></li>
-                    <li><a href="#contact"><i class="fas fa-chevron-left"></i> <span data-key="navContact">اتصل بنا</span></a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h5 data-key="footerServices">خدماتنا</h5>
-                <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-chevron-left"></i> <span data-key="service1Title">الخرسانة الجاهزة</span></a></li>
-                    <li><a href="#"><i class="fas fa-chevron-left"></i> <span data-key="service2Title">ضخ الخرسانة</span></a></li>
-                    <li><a href="#"><i class="fas fa-chevron-left"></i> <span data-key="service3Title">اختبارات الجودة</span></a></li>
-                    <li><a href="#"><i class="fas fa-chevron-left"></i> <span data-key="service4Title">الاستشارات الفنية</span></a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h5 data-key="footerContact">معلومات الاتصال</h5>
-                <p><i class="fas fa-map-marker-alt"></i> <span data-key="addrValue">المنطقة الصناعية، جدة، السعودية</span></p>
-                <p><i class="fas fa-phone"></i> +966 50 000 0000</p>
-                <p><i class="fas fa-envelope"></i> info@azazalbena.com</p>
-                <p><i class="fas fa-clock"></i> <span data-key="service24">خدمة 24/7 متاحة</span></p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2024 <span data-key="companyFull">شركة عزاز البناء للخرسانة الجاهزة</span>. <span data-key="rights">جميع الحقوق محفوظة</span>. | <span data-key="designed">صمم بإتقان</span></p>
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/966500000000" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <script>
-        // Translation Data
+        // Translations
         const translations = {
             ar: {
-                pageTitle: "شركة عزاز البناء للخرسانة الجاهزة | جدة - السعودية",
                 loading: "جاري التحميل...",
                 companyName: "شركة عزاز البناء",
                 companyTag: "للخرسانة الجاهزة",
                 navHome: "الرئيسية",
                 navAbout: "من نحن",
                 navServices: "خدماتنا",
-                navProducts: "منتجاتنا",
-                navFleet: "معداتنا",
                 navContact: "اتصل بنا",
                 heroBadge: "المورد الموثوق للخرسانة في السعودية",
                 heroTitle: "نبني مستقبل جدة بجودة خرسانية متفوقة",
-                heroDesc: "نحن المورد الرائد للخرسانة الجاهزة في جدة، نقدم خرسانة عالية الجودة من C15 إلى C45 مع أسطول حديث من 30 خلاطة و6 مضخات",
+                heroDesc: "نحن المورد الرائد للخرسانة الجاهزة في جدة، نقدم خرسانة عالية الجودة من C15 إلى C45",
                 statPumps: "مضخات خرسانية",
                 statTrucks: "شاحنة خلط",
-                statService: "خدمة على مدار الساعة",
                 btnQuote: "احصل على عرض سعر",
-                btnProducts: "تصفح المنتجات",
-                aboutTitle: "عن شركتنا",
-                aboutSubtitle: "نقدم حلول خرسانية ممتازة في جدة والمناطق المحيطة بها",
-                aboutHeading: "شريكك الموثوق في البناء",
-                aboutPara1: "شركة عزاز البناء للخرسانة الجاهزة هي شركة رائدة في مجال توريد الخرسانة الجاهزة مقرها جدة، المملكة العربية السعودية. نحن متخصصون في توفير خرسانة عالية الجودة لمشاريع البناء بجميع الأحجام، من المباني السكنية إلى المشاريع التجارية الكبيرة.",
-                aboutPara2: "بفضل أسطولنا الحديث المكون من 30 شاحنة خلط و6 مضخات خرسانية، نضمن التسليم في الوقت المحدد والخدمات الاحترافية لتلبية مواعيد البناء الخاصة بك. التزامنا بالجودة ورضا العملاء جعلنا الخيار المفضل في المنطقة.",
-                feat1: "معايير جودة معتمدة من الأيزو",
-                feat2: "مختبر اختبارات متطور",
-                feat3: "فريق تقني ذو خبرة",
-                feat4: "ضمان التسليم في الوقت المحدد",
-                feat5: "أسعار تنافسية",
-                yearsExp: "سنوات<br>خبرة",
-                servicesTitle: "خدماتنا",
-                servicesSubtitle: "حلول خرسانية شاملة مصممة حسب متطلبات مشروعك",
-                service1Title: "توريد الخرسانة الجاهزة",
-                service1Desc: "خرسانة جاهزة عالية الجودة تُسلم إلى موقع البناء الخاص بك في التوقيت المحدد. نقدم درجات متنوعة من C15 إلى C45 لتلبية متطلباتك الإنشائية المحددة.",
-                service2Title: "خدمات ضخ الخرسانة",
-                service2Desc: "ضخ خرساني احترافي باستخدام أسطولنا المكون من 6 مضخات حديثة. نتعامل مع المباني العالية والأساسات والهياكل المعقدة بسهولة ودقة.",
-                service3Title: "اختبارات الجودة",
-                service3Desc: "خدمات اختبار في الموقع والمختبر لضمان امتثال خرسانتك لجميع متطلبات كود البناء السعودي والمعايير الدولية.",
-                service4Title: "الاستشارات الفنية",
-                service4Desc: "نصائح خبراء حول تصميم خلطات الخرسانة، وتقنيات الصب، وطرق المعالجة لضمان القوة والمتانة المثلى لهياكللك.",
-                service5Title: "التوريد الطارئ",
-                service5Desc: "خدمات توريد خرسانية طارئة على مدار 24/7 للاحتياجات العاجلة للمشروع. نحن نفهم أن الوقت هو المال في أعمال البناء.",
-                service6Title: "خيارات صديقة للبيئة",
-                service6Desc: "حلول خرسانية مستدامة مع تصاميم خلط محسنة لتقليل الأثر البيئي مع الحفاظ على الأداء المتفوق.",
-                productsTitle: "درجات الخرسانة",
-                productsSubtitle: "نوفر جميع درجات الخرسانة القياسية من C15 إلى C45، مطابقة لكود البناء السعودي",
-                grade1Name: "الدرجة القياسية",
-                grade1Desc: "مثالية للخرسانة العازلة والتطبيقات غير الإنشائية",
-                grade2Name: "الأغراض العامة",
-                grade2Desc: "مثالية للأرضيات المنزلية والأساسات",
-                grade3Name: "الدرجة الإنشائية",
-                grade3Desc: "تُستخدم في الهياكل الخرسانية المسلحة",
-                grade4Name: "قوة عالية",
-                grade4Desc: "للتطبيقات الإنشائية الثقيلة",
-                grade5Name: "درجة تجارية",
-                grade5Desc: "البناء التجاري والصناعي",
-                grade6Name: "درجة ممتازة",
-                grade6Desc: "أقصى قوة للهياكل الحرجة",
-                specStrength: "القوة:",
-                specSlump: "الهبوط:",
-                specUsage: "الاستخدام:",
-                unitMpa: "ميجا باسكال",
-                unitMm: "ملم",
-                grade1Usage: "الأساسات، العزل",
-                grade2Usage: "الأرضيات، الممرات",
-                grade3Usage: "الكمرات، الأعمدة",
-                grade4Usage: "الأحمال الثقيلة",
-                grade5Usage: "المباني التجارية",
-                grade6Usage: "الأبراج، الجسور",
-                fleetTitle: "معداتنا",
-                fleetSubtitle: "معدات حديثة تضمن خدمة موثوقة وفعالة",
-                unitUnits: "وحدة",
-                unitLab: "مختبر",
-                fleet1Title: "شاحنات الخلط",
-                fleet1Desc: "شاحنات خلط حديثة بسعة 8-12 متر مكعب، مزودة بنظام تحديد المواقع GPS للمراقبة الفورية والتسليم في الوقت المحدد.",
-                fleet2Title: "مضخات الخرسانة",
-                fleet2Desc: "مضخات خرسانية عالية السعة قادرة على الوصول إلى ارتفاع 42 متر، مثالية لمشاريع المباني العالية.",
-                fleet3Title: "مختبر الاختبارات",
-                fleet3Desc: "مختبر مراقبة جودة في الموقع مجهز بمعدات اختبار حديثة لاختبارات الهبوط والمكعبات والركام.",
-                fleet4Title: "فريق الصيانة",
-                fleet4Desc: "طاقم صيانة مخصص يضمن أن جميع المعدات في حالة عمل مثالية لخدمة مستمرة.",
-                whyTitle: "لماذا تختارنا",
-                whySubtitle: "ما الذي يجعل عزاز البناء المورد المفضل للخرسانة في جدة",
-                why1Title: "ضمان الجودة",
-                why1Desc: "كل دفعة تُختبر للامتثال لكود البناء السعودي والمعايير الدولية",
-                why2Title: "تسليم في الوقت المحدد",
-                why2Desc: "الأسطول الكبير يضمن وصول خرصانتك في الوقت المحدد، كل مرة، للحفاظ على جداول المشاريع",
-                why3Title: "دعم 24/7",
-                why3Desc: "خدمة عملاء ودعم تقني على مدار الساعة لجميع احتياجاتك الخرسانية",
-                why4Title: "أسعار تنافسية",
-                why4Desc: "أفضل أسعار السوق دون المساس بمعايير الجودة أو الخدمة",
-                contactTitle: "اتصل بنا",
-                contactSubtitle: "تواصل للحصول على عروض أسعار، استشارات فنية، أو أي استفسارات",
-                contactHeading: "لنبني شيئاً عظيماً معاً",
-                contactPara: "اتصل بنا اليوم للحصول على عرض سعر مجاني أو لمناقشة متطلباتك الخرسانية. فريقنا جاهز لمساعدتك بنصائح خبيرة وأسعار تنافسية.",
-                addrLabel: "العنوان",
-                addrValue: "المنطقة الصناعية، جدة<br>المملكة العربية السعودية",
-                phoneLabel: "الهاتف",
-                emailLabel: "البريد الإلكتروني",
-                hoursLabel: "ساعات العمل",
-                hoursValue: "السبت - الخميس: 24 ساعة<br>الجمعة: للطوارئ فقط",
-                formName: "الاسم الكامل",
-                formPhone: "رقم الهاتف",
-                formEmail: "البريد الإلكتروني",
-                formGrade: "درجة الخرسانة المطلوبة",
-                selectGrade: "اختر الدرجة",
-                optStandard: "قياسية",
-                optGeneral: "أغراض عامة",
-                optStructural: "إنشائية",
-                optHigh: "قوة عالية",
-                optCommercial: "تجارية",
-                optPremium: "ممتازة",
-                formMessage: "تفاصيل المشروع",
-                formSubmit: "إرسال الرسالة",
-                mapText: "خريطة الموقع - المنطقة الصناعية بجدة",
-                footerCompany: "عزاز البناء",
-                footerDesc: "المورد الرائد للخرسانة الجاهزة في جدة، المملكة العربية السعودية. ملتزمون بالجودة والموثوقية ورضا العملاء.",
-                footerLinks: "روابط سريعة",
-                footerServices: "خدماتنا",
-                footerContact: "معلومات الاتصال",
-                service24: "خدمة 24/7 متاحة",
-                companyFull: "شركة عزاز البناء للخرسانة الجاهزة",
-                rights: "جميع الحقوق محفوظة",
-                designed: "صمم بإتقان"
+                footerDesc: "المورد الرائد للخرسانة الجاهزة في جدة، المملكة العربية السعودية",
+                companyFull: "شركة عزاز البناء للخرسانة الجاهزة"
             },
             en: {
-                pageTitle: "Azaz Albena Readymix Company | Jeddah - Saudi Arabia",
                 loading: "Loading...",
                 companyName: "Azaz Albena",
                 companyTag: "Readymix Company",
                 navHome: "Home",
                 navAbout: "About Us",
                 navServices: "Services",
-                navProducts: "Products",
-                navFleet: "Our Fleet",
                 navContact: "Contact Us",
                 heroBadge: "Saudi Arabia's Trusted Concrete Supplier",
                 heroTitle: "Building Jeddah's Future With Premium Quality Concrete",
-                heroDesc: "Leading ready mix concrete supplier in Jeddah, delivering high-quality concrete from C15 to C45 with a modern fleet of 30 mixers and 6 pumps",
+                heroDesc: "Leading ready mix concrete supplier in Jeddah, delivering high-quality concrete from C15 to C45",
                 statPumps: "Concrete Pumps",
                 statTrucks: "Mixer Trucks",
-                statService: "24/7 Service Available",
                 btnQuote: "Get a Quote",
-                btnProducts: "Browse Products",
-                aboutTitle: "About Our Company",
-                aboutSubtitle: "Delivering excellent concrete solutions in Jeddah and surrounding areas",
-                aboutHeading: "Your Trusted Construction Partner",
-                aboutPara1: "Azaz Albena Readymix Company is a leading ready mix concrete supplier based in Jeddah, Saudi Arabia. We specialize in providing high-quality concrete for construction projects of all sizes, from residential buildings to large commercial developments.",
-                aboutPara2: "With our modern fleet of 30 mixer trucks and 6 concrete pumps, we ensure timely delivery and professional services to meet your construction deadlines. Our commitment to quality and customer satisfaction has made us the preferred choice in the region.",
-                feat1: "ISO Certified Quality Standards",
-                feat2: "Advanced Testing Laboratory",
-                feat3: "Experienced Technical Team",
-                feat4: "On-Time Delivery Guarantee",
-                feat5: "Competitive Pricing",
-                yearsExp: "Years of<br>Experience",
-                servicesTitle: "Our Services",
-                servicesSubtitle: "Comprehensive concrete solutions tailored to your project requirements",
-                service1Title: "Ready Mix Concrete Supply",
-                service1Desc: "High-quality ready mix concrete delivered to your construction site on schedule. We offer various grades from C15 to C45 to meet your specific structural requirements.",
-                service2Title: "Concrete Pumping Services",
-                service2Desc: "Professional concrete pumping using our fleet of 6 modern pumps. We handle high-rise buildings, foundations, and complex structures with ease and precision.",
-                service3Title: "Quality Testing",
-                service3Desc: "On-site and laboratory testing services to ensure your concrete meets all Saudi Building Code requirements and international standards.",
-                service4Title: "Technical Consultation",
-                service4Desc: "Expert advice on concrete mix design, pouring techniques, and curing methods to ensure optimal strength and durability for your structures.",
-                service5Title: "Emergency Supply",
-                service5Desc: "24/7 emergency concrete supply services for urgent project needs. We understand that time is money in the construction business.",
-                service6Title: "Eco-Friendly Options",
-                service6Desc: "Sustainable concrete solutions with optimized mix designs to reduce environmental impact while maintaining superior performance.",
-                productsTitle: "Concrete Grades",
-                productsSubtitle: "We supply all standard concrete grades from C15 to C45, compliant with Saudi Building Code",
-                grade1Name: "Standard Grade",
-                grade1Desc: "Ideal for blinding concrete and non-structural applications",
-                grade2Name: "General Purpose",
-                grade2Desc: "Perfect for domestic floors and foundations",
-                grade3Name: "Structural Grade",
-                grade3Desc: "Used in reinforced concrete structures",
-                grade4Name: "High Strength",
-                grade4Desc: "For heavy-duty structural applications",
-                grade5Name: "Commercial Grade",
-                grade5Desc: "Commercial and industrial construction",
-                grade6Name: "Premium Grade",
-                grade6Desc: "Maximum strength for critical structures",
-                specStrength: "Strength:",
-                specSlump: "Slump:",
-                specUsage: "Usage:",
-                unitMpa: "MPa",
-                unitMm: "mm",
-                grade1Usage: "Footings, Blinding",
-                grade2Usage: "Floors, Driveways",
-                grade3Usage: "Beams, Columns",
-                grade4Usage: "Heavy Loads",
-                grade5Usage: "Commercial Buildings",
-                grade6Usage: "Towers, Bridges",
-                fleetTitle: "Our Fleet",
-                fleetSubtitle: "Modern equipment ensuring reliable and efficient service delivery",
-                unitUnits: "Units",
-                unitLab: "Lab",
-                fleet1Title: "Mixer Trucks",
-                fleet1Desc: "Modern mixer trucks with 8-12 cubic meter capacity, GPS tracked for real-time monitoring and timely delivery to your site.",
-                fleet2Title: "Concrete Pumps",
-                fleet2Desc: "High-capacity concrete pumps capable of reaching up to 42 meters height, perfect for high-rise construction projects.",
-                fleet3Title: "Testing Laboratory",
-                fleet3Desc: "On-site quality control laboratory equipped with modern testing equipment for slump, cube, and aggregate testing.",
-                fleet4Title: "Maintenance Team",
-                fleet4Desc: "Dedicated maintenance crew ensuring all equipment is in perfect working condition for uninterrupted service.",
-                whyTitle: "Why Choose Us",
-                whySubtitle: "What makes Azaz Albena the preferred concrete supplier in Jeddah",
-                why1Title: "Quality Assurance",
-                why1Desc: "Every batch tested for compliance with Saudi Building Code and international standards",
-                why2Title: "Timely Delivery",
-                why2Desc: "Large fleet ensures your concrete arrives on time, every time, maintaining project schedules",
-                why3Title: "24/7 Support",
-                why3Desc: "Round-the-clock customer service and technical support for all your concrete needs",
-                why4Title: "Competitive Pricing",
-                why4Desc: "Best market rates without compromising on quality or service standards",
-                contactTitle: "Contact Us",
-                contactSubtitle: "Get in touch for quotes, technical consultation, or any inquiries",
-                contactHeading: "Let's Build Something Great Together",
-                contactPara: "Contact us today for a free quote or to discuss your concrete requirements. Our team is ready to assist you with expert advice and competitive pricing.",
-                addrLabel: "Address",
-                addrValue: "Industrial Area, Jeddah<br>Saudi Arabia",
-                phoneLabel: "Phone",
-                emailLabel: "Email",
-                hoursLabel: "Working Hours",
-                hoursValue: "Saturday - Thursday: 24 Hours<br>Friday: Emergency Only",
-                formName: "Full Name",
-                formPhone: "Phone Number",
-                formEmail: "Email Address",
-                formGrade: "Concrete Grade Needed",
-                selectGrade: "Select Grade",
-                optStandard: "Standard",
-                optGeneral: "General Purpose",
-                optStructural: "Structural",
-                optHigh: "High Strength",
-                optCommercial: "Commercial",
-                optPremium: "Premium",
-                formMessage: "Project Details",
-                formSubmit: "Send Message",
-                mapText: "Location Map - Jeddah Industrial Area",
-                footerCompany: "Azaz Albena",
-                footerDesc: "Leading ready mix concrete supplier in Jeddah, Saudi Arabia. Committed to quality, reliability, and customer satisfaction.",
-                footerLinks: "Quick Links",
-                footerServices: "Our Services",
-                footerContact: "Contact Info",
-                service24: "24/7 Service Available",
-                companyFull: "Azaz Albena Readymix Company",
-                rights: "All Rights Reserved",
-                designed: "Designed with Excellence"
+                footerDesc: "Leading ready mix concrete supplier in Jeddah, Saudi Arabia",
+                companyFull: "Azaz Albena Readymix Company"
             }
         };
 
         let currentLang = 'ar';
 
-        // Toggle Language Function
         function toggleLanguage() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
             const html = document.getElementById('htmlRoot');
             const langText = document.getElementById('langText');
-            const loaderText = document.getElementById('loaderText');
-            const logoIcon = document.getElementById('logoIcon');
+            const mainLogo = document.getElementById('mainLogo');
             
-            // Update HTML attributes
             html.setAttribute('lang', currentLang);
             html.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
-            
-            // Update button text
             langText.textContent = currentLang === 'ar' ? 'English' : 'العربية';
+            mainLogo.textContent = currentLang === 'ar' ? 'ع أ' : 'AA';
             
-            // Update logo text
-            loaderText.textContent = currentLang === 'ar' ? 'ع أ' : 'AA';
-            logoIcon.textContent = currentLang === 'ar' ? 'ع أ' : 'AA';
-            
-            // Update all translatable elements
             document.querySelectorAll('[data-key]').forEach(element => {
                 const key = element.getAttribute('data-key');
                 if (translations[currentLang][key]) {
-                    element.innerHTML = translations[currentLang][key];
+                    element.textContent = translations[currentLang][key];
                 }
             });
             
-            // Update document title
-            document.title = translations[currentLang].pageTitle;
-            
-            // Save preference
             localStorage.setItem('preferredLanguage', currentLang);
         }
 
-        // Check for saved language preference
+        // Loading
         window.addEventListener('load', function() {
             const savedLang = localStorage.getItem('preferredLanguage');
             if (savedLang && savedLang !== currentLang) {
                 toggleLanguage();
             }
-            
-            // Hide loader
-            setTimeout(function() {
+            setTimeout(() => {
                 document.getElementById('loader').classList.add('hidden');
             }, 1000);
         });
 
-        // Sticky Header
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            }
-        });
-
-        // Mobile Menu Toggle
+        // Mobile Menu
         function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
+            document.getElementById('navLinks').classList.toggle('active');
         }
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('active');
-            });
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Fade In Animation on Scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Form Submission
-        function handleSubmit(e) {
-            e.preventDefault();
-            const msg = currentLang === 'ar' ? 'شكراً لتواصلك! سنقوم بالرد عليك قريباً.' : 'Thank you for contacting us! We will reply soon.';
-            alert(msg);
-            document.getElementById('contactForm').reset();
-        }
-
-        // Counter Animation
-        function animateCounter(element, target) {
-            let current = 0;
-            const increment = target / 50;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target;
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current);
-                }
-            }, 30);
-        }
-
-        // Trigger counters when hero is visible
-        const heroObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counters = document.querySelectorAll('.stat-number');
-                    counters.forEach(counter => {
-                        const text = counter.textContent;
-                        const target = parseInt(text);
-                        if (!isNaN(target)) {
-                            animateCounter(counter, target);
-                        }
-                    });
-                    heroObserver.unobserve(entry.target);
-                }
-            });
-        });
-
-        heroObserver.observe(document.querySelector('.hero'));
     </script>
 </body>
 </html>
