@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة عزاز البناء للخرسانة الجاهزة | جدة - السعودية</title>
+    <meta name="description" content="أفضل مورد خرسانة جاهزة في جدة. نوفر خرسانة من C15 إلى C45 مع 6 مضخات و30 خلاطة. خدمة 24/7.">
+    
+    <!-- Google Fonts - Arabic Support -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #f59e0b;
+            --accent-color: #dc2626;
+            --dark-color: #0f172a;
+            --light-color: #f8fafc;
+            --gray-color: #64748b;
+            --success-color: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            overflow-x: hidden;
+            direction: rtl;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
+
+        .logo-text h1 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .logo-text span {
+            font-size: 0.8rem;
+            color: var(--gray-color);
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 700;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(15, 23, 42, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><path fill="%23e0e0e0" d="M0 300h1200v300H0z"/><rect x="100" y="200" width="200" height="300" fill="%23ccc"/><rect x="400" y="150" width="150" height="350" fill="%23bbb"/><rect x="700" y="250" width="180" height="250" fill="%23ccc"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
+            background-size: 100px 100px;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, 100px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 500;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h3 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--gray-color);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--light-color);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-main {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+        }
+
+        .experience-badge .years {
+            font-size: 3rem;
+            font-weight: 900;
+            display: block;
+            line-height: 1;
+        }
+
+        .experience-badge .text {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .about-content h4 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .about-content p {
+            color: var(--gray-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .features-list li {
+            padding: 0.8rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .features-list i {
+            color: var(--success-color);
+            font-size: 1.2rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: right;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.2rem;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
+        }
+
+        .service-card h4 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .service-card p {
+            color: var(--gray-color);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* Products Section */
+        .products {
+            background: linear-gradient(135deg, var(--dark-color), #1e293b);
+            color: white;
+        }
+
+        .products .section-header h3 {
+            color: white;
+        }
+
+        .products .section-header p {
+            color: #94a3b8;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .product-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+            border-color: var(--secondary-color);
+        }
+
+        .product-grade {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .product-desc {
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .product-specs {
+            list-style: none;
+            text-align: right;
+            margin-top: 1.5rem;
+            background: rgba(0,0,0,0.2);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .product-specs li {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .product-specs li:last-child {
+            border-bottom: none;
+        }
+
+        .product-specs li span:first-child {
+            font-weight: 700;
+        }
+
+        /* Fleet Section */
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .fleet-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .fleet-card:hover {
+            transform: scale(1.02);
+        }
+
+        .fleet-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .fleet-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .fleet-count {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            padding: 0.3rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .fleet-info h4 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-weight: 800;
+        }
+
+        .fleet-info p {
+            color: var(--gray-color);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: var(--light-color);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .why-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2.5rem;
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
+        }
+
+        .why-card h4 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .why-card p {
+            color: var(--gray-color);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h4 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .contact-info > p {
+            color: var(--gray-color);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--light-color);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateX(-10px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text h5 {
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        .contact-text p, .contact-text a {
+            color: var(--gray-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-text a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
+        }
+
+        /* Map */
+        .map-container {
+            margin-top: 3rem;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 400px;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-color);
+            font-size: 1.2rem;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 4rem 2rem 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h5 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 800;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            line-height: 1.9;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Language Switcher */
+        .lang-switch {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 999;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .lang-switch a {
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--gray-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-switch a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .lang-switch a:hover:not(.active) {
+            color: var(--primary-color);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: 0;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                gap: 1.5rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero-stats {
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .about-grid,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .experience-badge {
+                left: 20px;
+                right: auto;
+            }
+
+            .lang-switch {
+                bottom: 20px;
+                left: 20px;
+                padding: 0.6rem 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                margin-top: 70px;
+                min-height: auto;
+                padding: 4rem 1rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .section-header h3 {
+                font-size: 1.8rem;
+            }
+
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .cta-buttons {
+                width: 100%;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 0 auto 1rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 998;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        @media (max-width: 640px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 80px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">ع أ</div>
+            <p style="color: var(--primary-color); font-weight: 700; font-size: 1.2rem;">جاري التحميل...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">ع أ</div>
+                <div class="logo-text">
+                    <h1>شركة عزاز البناء</h1>
+                    <span>للخرسانة الجاهزة</span>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#products">منتجاتنا</a></li>
+                <li><a href="#fleet">معداتنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-badge">المورد الموثوق للخرسانة في السعودية</span>
+            <h2>نبني مستقبل جدة بجودة خرسانية متفوقة</h2>
+            <p>نحن المورد الرائد للخرسانة الجاهزة في جدة، نقدم خرسانة عالية الجودة من C15 إلى C45 مع أسطول حديث من 30 خلاطة و6 مضخات</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">مضخات خرسانية</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">30</span>
+                    <span class="stat-label">شاحنة خلط</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">خدمة على مدار الساعة</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-phone"></i> احصل على عرض سعر
+                </a>
+                <a href="#products" class="btn btn-secondary">
+                    <i class="fas fa-cube"></i> تصفح المنتجات
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h3>عن شركتنا</h3>
+                <p>نقدم حلول خرسانية ممتازة في جدة والمناطق المحيطة بها</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content fade-in">
+                    <h4>شريكك الموثوق في البناء</h4>
+                    <p>شركة عزاز البناء للخرسانة الجاهزة هي شركة رائدة في مجال توريد الخرسانة الجاهزة مقرها جدة، المملكة العربية السعودية. نحن متخصصون في توفير خرسانة عالية الجودة لمشاريع البناء بجميع الأحجام، من المباني السكنية إلى المشاريع التجارية الكبيرة.</p>
+                    <p>بفضل أسطولنا الحديث المكون من 30 شاحنة خلط و6 مضخات خرسانية، نضمن التسليم في الوقت المحدد والخدمات الاحترافية لتلبية مواعيد البناء الخاصة بك. التزامنا بالجودة ورضا العملاء جعلنا الخيار المفضل في المنطقة.</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> معايير جودة معتمدة من الأيزو</li>
+                        <li><i class="fas fa-check-circle"></i> مختبر اختبارات متطور</li>
+                        <li><i class="fas fa-check-circle"></i> فريق تقني ذو خبرة</li>
+                        <li><i class="fas fa-check-circle"></i> ضمان التسليم في الوقت المحدد</li>
+                        <li><i class="fas fa-check-circle"></i> أسعار تنافسية</li>
+                    </ul>
+                </div>
+                
+                <div class="about-image fade-in">
+                    <div class="about-image-main">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="years">+10</span>
+                        <span class="text">سنوات<br>خبرة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h3>خدماتنا</h3>
+                <p>حلول خرسانية شاملة مصممة حسب متطلبات مشروعك</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-mix"></i>
+                    </div>
+                    <h4>توريد الخرسانة الجاهزة</h4>
+                    <p>خرسانة جاهزة عالية الجودة تُسلم إلى موقع البناء الخاص بك في التوقيت المحدد. نقدم درجات متنوعة من C15 إلى C45 لتلبية متطلباتك الإنشائية المحددة.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <h4>خدمات ضخ الخرسانة</h4>
+                    <p>ضخ خرساني احترافي باستخدام أسطولنا المكون من 6 مضخات حديثة. نتعامل مع المباني العالية والأساسات والهياكل المعقدة بسهولة ودقة.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h4>اختبارات الجودة</h4>
+                    <p>خدمات اختبار في الموقع والمختبر لضمان امتثال خرسانتك لجميع متطلبات كود البناء السعودي والمعايير الدولية.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h4>الاستشارات الفنية</h4>
+                    <p>نصائح خبراء حول تصميم خلطات الخرسانة، وتقنيات الصب، وطرق المعالجة لضمان القوة والمتانة المثلى لهياكللك.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>التوريد الطارئ</h4>
+                    <p>خدمات توريد خرسانية طارئة على مدار 24/7 للاحتياجات العاجلة للمشروع. نحن نفهم أن الوقت هو المال في أعمال البناء.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>خيارات صديقة للبيئة</h4>
+                    <p>حلول خرسانية مستدامة مع تصاميم خلط محسنة لتقليل الأثر البيئي مع الحفاظ على الأداء المتفوق.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h3>درجات الخرسانة</h3>
+                <p>نوفر جميع درجات الخرسانة القياسية من C15 إلى C45، مطابقة لكود البناء السعودي</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <div class="product-grade">C15</div>
+                    <div class="product-name">الدرجة القياسية</div>
+                    <p class="product-desc">مثالية للخرسانة العازلة والتطبيقات غير الإنشائية</p>
+                    <ul class="product-specs">
+                        <li><span>القوة:</span> <span>15 ميجا باسكال</span></li>
+                        <li><span>الهبوط:</span> <span>75-100 ملم</span></li>
+                        <li><span>الاستخدام:</span> <span>الأساسات، العزل</span></li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-grade">C20</div>
+                    <div class="product-name">الأغراض العامة</div>
+                    <p class="product-desc">مثالية للأرضيات المنزلية والأساسات</p>
+                    <ul class="product-specs">
+                        <li><span>القوة:</span> <span>20 ميجا باسكال</span></li>
+                        <li><span>الهبوط:</span> <span>75-100 ملم</span></li>
+                        <li><span>الاستخدام:</span> <span>الأرضيات، الممرات</span></li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-grade">C25</div>
+                    <div class="product-name">الدرجة الإنشائية</div>
+                    <p class="product-desc">تُستخدم في الهياكل الخرسانية المسلحة</p>
+                    <ul class="product-specs">
+                        <li><span>القوة:</span> <span>25 ميجا باسكال</span></li>
+                        <li><span>الهبوط:</span> <span>100-150 ملم</span></li>
+                        <li><span>الاستخدام:</span> <span>الكمرات، الأعمدة</span></li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-grade">C30</div>
+                    <div class="product-name">قوة عالية</div>
+                    <p class="product-desc">للتطبيقات الإنشائية الثقيلة</p>
+                    <ul class="product-specs">
+                        <li><span>القوة:</span> <span>30 ميجا باسكال</span></li>
+                        <li><span>الهبوط:</span> <span>100-150 ملم</span></li>
+                        <li><span>الاستخدام:</span> <span>الأحمال الثقيلة</span></li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-grade">C35</div>
+                    <div class="product-name">درجة تجارية</div>
+                    <p class="product-desc">البناء التجاري والصناعي</p>
+                    <ul class="product-specs">
+                        <li><span>القوة:</span> <span>35 ميجا باسكال</span></li>
+                        <li><span>الهبوط:</span> <span>150-200 ملم</span></li>
+                        <li><span>الاستخدام:</span> <span>المباني التجارية</span></li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-grade">C45</div>
+                    <div class="product-name">درجة ممتازة</div>
+                    <p class="product-desc">أقصى قوة للهياكل الحرجة</p>
+                    <ul class="product-specs">
+                        <li><span>القوة:</span> <span>45 ميجا باسكال</span></li>
+                        <li><span>الهبوط:</span> <span>150-200 ملم</span></li>
+                        <li><span>الاستخدام:</span> <span>الأبراج، الجسور</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section class="fleet" id="fleet">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h3>معداتنا</h3>
+                <p>معدات حديثة تضمن خدمة موثوقة وفعالة</p>
+            </div>
+            
+            <div class="fleet-grid">
+                <div class="fleet-card fade-in">
+                    <div class="fleet-image">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <div class="fleet-info">
+                        <span class="fleet-count">30 وحدة</span>
+                        <h4>شاحنات الخلط</h4>
+                        <p>شاحنات خلط حديثة بسعة 8-12 متر مكعب، مزودة بنظام تحديد المواقع GPS للمراقبة الفورية والتسليم في الوقت المحدد.</p>
+                    </div>
+                </div>
+                
+                <div class="fleet-card fade-in">
+                    <div class="fleet-image">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="fleet-info">
+                        <span class="fleet-count">6 وحدات</span>
+                        <h4>مضخات الخرسانة</h4>
+                        <p>مضخات خرسانية عالية السعة قادرة على الوصول إلى ارتفاع 42 متر، مثالية لمشاريع المباني العالية.</p>
+                    </div>
+                </div>
+                
+                <div class="fleet-card fade-in">
+                    <div class="fleet-image">
+                        <i class="fas fa-vials"></i>
+                    </div>
+                    <div class="fleet-info">
+                        <span class="fleet-count">1 مختبر</span>
+                        <h4>مختبر الاختبارات</h4>
+                        <p>مختبر مراقبة جودة في الموقع مجهز بمعدات اختبار حديثة لاختبارات الهبوط والمكعبات والركام.</p>
+                    </div>
+                </div>
+                
+                <div class="fleet-card fade-in">
+                    <div class="fleet-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="fleet-info">
+                        <span class="fleet-count">24/7</span>
+                        <h4>فريق الصيانة</h4>
+                        <p>طاقم صيانة مخصص يضمن أن جميع المعدات في حالة عمل مثالية لخدمة مستمرة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h3>لماذا تختارنا</h3>
+                <p>ما الذي يجعل عزاز البناء المورد المفضل للخرسانة في جدة</p>
+            </div>
+            
+            <div class="why-grid">
+                <div class="why-card fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>ضمان الجودة</h4>
+                    <p>كل دفعة تُختبر للامتثال لكود البناء السعودي والمعايير الدولية</p>
+                </div>
+                
+                <div class="why-card fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h4>تسليم في الوقت المحدد</h4>
+                    <p>الأسطول الكبير يضمن وصول خرصانتك في الوقت المحدد، كل مرة، للحفاظ على جداول المشاريع</p>
+                </div>
+                
+                <div class="why-card fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>دعم 24/7</h4>
+                    <p>خدمة عملاء ودعم تقني على مدار الساعة لجميع احتياجاتك الخرسانية</p>
+                </div>
+                
+                <div class="why-card fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h4>أسعار تنافسية</h4>
+                    <p>أفضل أسعار السوق دون المساس بمعايير الجودة أو الخدمة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h3>اتصل بنا</h3>
+                <p>تواصل للحصول على عروض أسعار، استشارات فنية، أو أي استفسارات</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in">
+                    <h4>لنبني شيئاً عظيماً معاً</h4>
+                    <p>اتصل بنا اليوم للحصول على عرض سعر مجاني أو لمناقشة متطلباتك الخرسانية. فريقنا جاهز لمساعدتك بنصائح خبيرة وأسعار تنافسية.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>العنوان</h5>
+                                <p>المنطقة الصناعية، جدة<br>المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>الهاتف</h5>
+                                <a href="tel:+966500000000">+966 50 000 0000</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>البريد الإلكتروني</h5>
+                                <a href="mailto:info@azazalbena.com">info@azazalbena.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>ساعات العمل</h5>
+                                <p>السبت - الخميس: 24 ساعة<br>الجمعة: للطوارئ فقط</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in">
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required placeholder="اسمك">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="05X XXX XXXX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="grade">درجة الخرسانة المطلوبة</label>
+                            <select id="grade" name="grade">
+                                <option value="">اختر الدرجة</option>
+                                <option value="C15">C15 - قياسية</option>
+                                <option value="C20">C20 - أغراض عامة</option>
+                                <option value="C25">C25 - إنشائية</option>
+                                <option value="C30">C30 - قوة عالية</option>
+                                <option value="C35">C35 - تجارية</option>
+                                <option value="C45">C45 - ممتازة</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">تفاصيل المشروع</label>
+                            <textarea id="message" name="message" placeholder="أخبرنا عن متطلبات مشروعك..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container fade-in">
+                <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <span>خريطة الموقع - المنطقة الصناعية بجدة</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h5>عزاز البناء</h5>
+                <p>المورد الرائد للخرسانة الجاهزة في جدة، المملكة العربية السعودية. ملتزمون بالجودة والموثوقية ورضا العملاء.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h5>روابط سريعة</h5>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-left"></i> من نحن</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
+                    <li><a href="#products"><i class="fas fa-chevron-left"></i> منتجاتنا</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h5>خدماتنا</h5>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> الخرسانة الجاهزة</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> ضخ الخرسانة</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> اختبارات الجودة</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> الاستشارات الفنية</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h5>معلومات الاتصال</h5>
+                <p><i class="fas fa-map-marker-alt"></i> المنطقة الصناعية، جدة، السعودية</p>
+                <p><i class="fas fa-phone"></i> +966 50 000 0000</p>
+                <p><i class="fas fa-envelope"></i> info@azazalbena.com</p>
+                <p><i class="fas fa-clock"></i> خدمة 24/7 متاحة</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 شركة عزاز البناء للخرسانة الجاهزة. جميع الحقوق محفوظة. | صمم بإتقان</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/966500000000" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1000);
+        });
+
+        // Sticky Header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade In Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form Submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('شكراً لتواصلك! سنقوم بالرد عليك قريباً.');
+            document.getElementById('contactForm').reset();
+        }
+
+        // Counter Animation
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 30);
+        }
+
+        // Trigger counters when hero is visible
+        const heroObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = document.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        const text = counter.textContent;
+                        const target = parseInt(text);
+                        if (!isNaN(target)) {
+                            animateCounter(counter, target);
+                        }
+                    });
+                    heroObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        heroObserver.observe(document.querySelector('.hero'));
+    </script>
+</body>
+</html>
